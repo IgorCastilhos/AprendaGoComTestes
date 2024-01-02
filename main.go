@@ -2,8 +2,13 @@ package main
 
 import "fmt"
 
+const PREFIXOOLAPORTUGUES = "Olá, "
+
 func Ola(nome string) string {
-	return fmt.Sprintf("Olá, %s", nome)
+	if nome == "" {
+		nome = "Mundo"
+	}
+	return PREFIXOOLAPORTUGUES + nome
 }
 
 func main() {
